@@ -1141,7 +1141,12 @@ function createIslFile(originalFilePath, messages, language, innoSetup) {
         if (line.length > 0) {
             let firstChar = line.charAt(0);
             if (firstChar === '[' || firstChar === ';') {
-                content.push(line);
+                if (line === '; *** Inno Setup version 5.5.3+ English messages ***') {
+                    content.push(`; *** Inno Setup version 5.5.3+ ${innoSetup.defaultInfo.name} messages ***`);
+                }
+                else {
+                    content.push(line);
+                }
             }
             else {
                 let sections = line.split('=');
