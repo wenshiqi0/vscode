@@ -33,7 +33,6 @@ VersionInfoVersion={#RawVersion}
 ShowLanguageDialog=auto
 ArchitecturesAllowed={#ArchitecturesAllowed}
 ArchitecturesInstallIn64BitMode={#ArchitecturesInstallIn64BitMode}
-WizardStyle=modern
 
 #ifdef Sign
 SignTool=esrp
