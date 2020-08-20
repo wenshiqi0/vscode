@@ -395,6 +395,13 @@ export class CodeEditorWidget extends Disposable implements editorBrowser.ICodeE
 		this._modelData.model.setValue(newValue);
 	}
 
+	public getViewModel() {
+		if (!this._modelData) {
+			return null;
+		}
+		return this._modelData.viewModel;
+	}
+
 	public getModel(): ITextModel | null {
 		if (!this._modelData) {
 			return null;

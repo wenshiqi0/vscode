@@ -15,6 +15,7 @@ import { IViewEventListener } from 'vs/editor/common/view/viewEvents';
 import { IPartialViewLinesViewportData } from 'vs/editor/common/viewLayout/viewLinesViewportData';
 import { IEditorWhitespace } from 'vs/editor/common/viewLayout/whitespaceComputer';
 import { ITheme } from 'vs/platform/theme/common/themeService';
+import { IViewModelLinesCollection } from 'vs/editor/common/viewModel/splitLinesCollection';
 
 export interface IViewWhitespaceViewportData {
 	readonly id: number;
@@ -114,6 +115,7 @@ export interface IViewModel {
 	readonly coordinatesConverter: ICoordinatesConverter;
 
 	readonly viewLayout: IViewLayout;
+	readonly lines: IViewModelLinesCollection;
 
 	/**
 	 * Gives a hint that a lot of requests are about to come in for these line numbers.

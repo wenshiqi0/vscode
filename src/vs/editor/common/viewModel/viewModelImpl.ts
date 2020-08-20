@@ -37,7 +37,7 @@ export class ViewModel extends viewEvents.ViewEventEmitter implements IViewModel
 	private viewportStartLine: number;
 	private viewportStartLineTrackedRange: string | null;
 	private viewportStartLineDelta: number;
-	private readonly lines: IViewModelLinesCollection;
+	public readonly lines: IViewModelLinesCollection;
 	public readonly coordinatesConverter: ICoordinatesConverter;
 	public readonly viewLayout: ViewLayout;
 	private readonly decorations: ViewModelDecorations;
