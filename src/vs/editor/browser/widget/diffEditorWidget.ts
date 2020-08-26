@@ -1399,8 +1399,8 @@ abstract class ViewZonesComputer {
 
 				let resolvedAfterLineNumber = viewZoneLineNumber;
 				const model = this.widget.getViewModel();
-				if (model && model.modified) {
-					const hidden = model.modified.lines.getHiddenAreas();
+				if (model && model.original) {
+					const hidden = model.original.lines.getHiddenAreas();
 					if (hidden.length > 0) {
 						for (const range of hidden) {
 							const v = range.endLineNumber - range.startLineNumber + 1;
